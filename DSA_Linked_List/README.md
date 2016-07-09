@@ -4,9 +4,9 @@ Linked list is a sequence of links which contain items. Each contain a connectio
 Following are the important concepts and terminologies in linked list.
 
 
-*Link* - Each link of a linked list can store data called elements.
-*next* - Each link of a linked list contains a link/pointer to the next or previous link called next or prev link.
-*first* - Each linked list contains an link element called first. This element points to the first link in the linked list.
+*Link* - Each link of a linked list can store data called elements.  
+*next* - Each link of a linked list contains a link/pointer to the next or previous link called next or prev link.  
+*first* - Each linked list contains an link element called first. This element points to the first link in the linked list.  
 
 
 There are these following types of linked list
