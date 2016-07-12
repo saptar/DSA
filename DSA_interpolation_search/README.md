@@ -14,11 +14,11 @@ Since , the values are equally distributed, we can guess the position of searche
 midpoint = i + ((j-i)/(A[j]-A[i])*(X-A[i])
 ```
 where,  
-i -> lowerBound
-j -> higherBound
-A[i] -> element at index lowerBound
-A[j] -> element at index higherBound
-X -> Element to be searched.  
+i -> lowerBound  
+j -> higherBound  
+A[i] -> element at index lowerBound  
+A[j] -> element at index higherBound  
+X -> Element to be searched.    
 
 rest of the routine interms of updating the lowerBound and/or upperBounds in case the searched item is not found at midpoint remains same as Binary Search, a simple implementation of which can be found [here](https://github.com/saptar/DSA/tree/DSA_binary_search/DSA_binary_search).
 
