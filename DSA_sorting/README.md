@@ -48,3 +48,10 @@ Step 5 − Insert the value
 Step 6 − Repeat until list is sorted
 ```
 
+#### Selection Sort
+
+This sorting algorithm is a in-place comparsion based algorithm, in which the list is divided into two parts , the sorted part at the left end and the unsorted part at the right end. Initially sorted part is empty and unsorted part is the entire list.  
+
+
+
+
