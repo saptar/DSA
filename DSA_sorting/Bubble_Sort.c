@@ -28,7 +28,6 @@ bool iterate(int size){
 		}
 		idx++;
 	}
-
 	return flag;
 }
 

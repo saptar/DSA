@@ -28,5 +28,23 @@ As a part of this exercise, we would be looking into the implementation of the f
 
 #### Bubble Sort
 
-Bubble sort is a simple where adjacent pair of elements are compared and if the order is not as per desired(ascending or descending), then swap the element or else keep it as it is. When such an algorithm moves over the list once, we would end up getting the largest value at the last index/position of the list. The algorithm stops when for a pass over the entire list, no swaps are made.
+Bubble sort is a simple where adjacent pair of elements are compared and if the order is not as per desired(ascending or descending), then swap the element or else keep it as it is. When such an algorithm moves over the list once, we would end up getting the largest value at the last index/position of the list. The algorithm stops when for a pass over the entire list, no swaps are made.  
+The worst case and average case time complexity:  
+```sh
+T(n) = O(n^2)
+```
+
+#### Insertion Sort
+
+This is a in-place comparision based algorithm. Here a sublist is maintained which is always sorted. A element which is to be 'insert'ed in this sorted sub-list, has to find its appropriate place and insert it there. The array is searched sequentially and unsorted items are moved and inserted into sorted sub-list (in the same array). This algorithm is not suitable for large data sets as its average and worst case complexity are of Ο(n2) where n are no. of items.  
+
+Simple Algorithm for insertion sort  
+```sh
+Step 1 − If it is the first element, it is already sorted. return 1;
+Step 2 − Pick next element
+Step 3 − Compare with all elements in the sorted sub-list
+Step 4 − Shift all the elements in the sorted sub-list that is greater than the value to be sorted
+Step 5 − Insert the value
+Step 6 − Repeat until list is sorted
+```
 
