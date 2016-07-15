@@ -50,7 +50,38 @@ Step 6 − Repeat until list is sorted
 
 #### Selection Sort
 
-This sorting algorithm is a in-place comparsion based algorithm, in which the list is divided into two parts , the sorted part at the left end and the unsorted part at the right end. Initially sorted part is empty and unsorted part is the entire list.  
+This sorting algorithm is a in-place comparsion based algorithm, in which the list is divided into two parts , the sorted part at the left end and the unsorted part at the right end. Initially sorted part is empty and unsorted part is the entire list. For the first position, in the sorted list, we scan the entire right end and find out the lowest value element and place it in the first position. Followed by second one and so on.  
+Selection sort is an unstable sorting algorithm as the sequence of similar valued elements is not guaranteed to be maintained after sorting of the array.  
+The time complexity for this techinque is  
+```sh
+T(n) = O(n2)
+```
+Step wise algorithm  
+```sh
+Step 1 − Set MIN to location 0
+Step 2 − Search the minimum element in the list
+Step 3 − Swap with value at location MIN
+Step 4 − Increment MIN to point to next element
+Step 5 − Repeat until list is sorted
+```
+
+#### Merge Sort
+
+Merge sort is based on divide and conquer technique. It divides an array into halves and then combines them in a sorted manner.
+
+Algorithm for merge sort  
+```sh
+Step 1 − if it is only one element in the list it is already sorted, return.
+Step 2 − divide the list recursively into two halves until it can no more be divided.
+Step 3 − merge the smaller lists into new list in sorted order.
+```
+
+The worst time complexity of merge sort is
+```sh
+T(n) = O(nlogn)
+```
+which is significantly better than the previous sorting techniques.
+
 
 
 
