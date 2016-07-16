@@ -82,6 +82,23 @@ T(n) = O(nlogn)
 ```
 which is significantly better than the previous sorting techniques.
 
+#### Shell Sort
+
+Shell sort is an highly efficient algorithm base on insertion sort. This algorithm avoids large shifts as in case of insertion sorts if the smaller value is far right and has to move far left.  
+This algorithm uses insertion sort on widely spread elements first to sort them and then sorts the less widely spaced elements. This spacing is termed as interval and the interval is calculated based on Knuth's formula as 
+```sh
+h = h*3 +1
+```
+where h is interval with inital value of 1  
+Algorithm
+```sh
+Step 1 − Initialize the value of h
+Step 2 − Divide the list into smaller sub-list of equal interval h
+Step 3 − Sort these sub-lists using insertion sort
+Step 3 − Repeat until complete list is sorted
+```
+
+This algorithm has average and worst case time complexity of O(n). However, this is dependent on the selected interval and the distribution of values. For more details please visit [wikipedia][https://en.wikipedia.org/wiki/Shellsort] page on shell sort. It is rarely used physical applications for an inproper value of interval may increase time complexity. However, certain networking applications does make use of shell sort.
 
 
 
