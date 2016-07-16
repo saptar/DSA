@@ -98,8 +98,32 @@ Step 3 − Sort these sub-lists using insertion sort
 Step 3 − Repeat until complete list is sorted
 ```
 
-This algorithm has average and worst case time complexity of O(n). However, this is dependent on the selected interval and the distribution of values. For more details please visit [wikipedia][https://en.wikipedia.org/wiki/Shellsort] page on shell sort. It is rarely used physical applications for an inproper value of interval may increase time complexity. However, certain networking applications does make use of shell sort.
+This algorithm has average and worst case time complexity of O(n). However, this is dependent on the selected interval and the distribution of values. For more details please visit [wikipedia](https://en.wikipedia.org/wiki/Shellsort) page on shell sort. It is rarely used physical applications for an inproper value of interval may increase time complexity. However, certain networking applications does make use of shell sort.
 
+#### Quick Sort
 
+Quick sort is a highly efficient algorithm based on partitioning array into two parts, it is a divide and conquer algorithm. A large array is partioned into two parts one which holds values smaller than the pivot value on which the partition is made and another array holds the value greater than then pivot value.  
+The quick sort partitions the array and then calls itself recursive twice to sort the two sub arrays, much like the merge sort.  
+This algorithm is quite efficient for medium and large data sets with time complexity of
+```sh
+T(n) = O(nlogn)
+```
+This is one of the most commonly used algorithm for sorting, to date. It is not a stable alogrithm in the sense that original position of same valued elements may not be retained after sorting. This has a better time complexity than its rival the merge and the heap sort.
+For more info please refer the [wikipedia](https://en.wikipedia.org/wiki/Quicksort) page on quick sort.  
 
+Algorithm:
+```sh
+step 1- choose the highest indexed value as the pivot.
+Step 2 − Take two variables to point left and right of the list excluding pivot
+Step 3 − left points to the low index
+Step 4 − right points to the high
+Step 5 − while value at left is less than pivot move right
+Step 6 − while value at right is greater than pivot move left
+Step 7 − if both step 5 and step 6 does not match swap left and right
+Step 8 − if left ≥ right, the point where they met is new pivot
+```
+Do the above recursively .  
+The base case of the recursion is arrays of size zero or one, which never need to be sorted.  
 
+The pivot selection and partitioning steps can be done in several different ways; the choice of specific implementation schemes greatly affects the algorithm's performance, just like selection of interval in Selection sort.  
+The crux of the solution lies in selecting the first pivoit point, in this case we are selecting the last element as the pivot, and the next important aspect is the partioning. There are several ways to implement partitioning logic, one such way is described in our implementation.
