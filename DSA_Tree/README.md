@@ -32,5 +32,55 @@ All tree node shares common structure.
 The basic operation that can be performed on a binary tree data structure:  
 - Insert - insert an element in a tree/ create a tree.  
 - Search - search an element in a tree.  
-- pre-order traversal - traverse a tree in a pre-ordered manner.  
-- post-order traversal - traverse a tree in 
+- pre-order traversal - traverse a tree in a pre-ordered manner.      
+- post-order traversal - traverse a tree in post order manner.  
+- in-order traversal - traverse a tree in an in-order manner.  
+
+#### Insert
+The very first insertion creates the tree. Afterwards, whenever an element is to be inserted, first locate its proper location . Start search from root node and then if data value is less than key value, search empty location in the left of subtree and insert data , otherwise search a location in the right side.  
+Algorithm:  
+```sh
+If root is NULL 
+   then create root node
+return
+
+If root exists then
+   compare the data with node.data
+   
+   while until insertion position is located
+
+      If data is greater than node.data
+         goto right subtree
+      else
+         goto left subtree
+
+   endwhile 
+   
+   insert data
+	
+end If
+```
+
+#### Search Operation
+Whenever an element is to be searched in a tree, start from the root node. Then if the value is less than the key value search in the left subtree otherwise look in the right subtree. Do same for all nodes encountered.  
+Algorithm:  
+```sh
+If root.data is equal to search.data
+   return root
+else
+   while data not found
+
+      If data is greater than node.data
+         goto right subtree
+      else
+         goto left subtree
+         
+      If data found
+         return node
+
+   endwhile 
+   
+   return data not found
+   
+end if    
+```
