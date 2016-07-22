@@ -70,6 +70,27 @@ struct node* search(int data){
 	}
 }
 
+void preOrderTraversal(struct node* node){
+	if(node!=NULL){
+		printf("%d ",node -> data);
+		preOrderTraversal(node -> leftChild);
+		preOrderTraversal(node -> rightChild);
+	}
+}
+void inOrderTraversal(struct node* node){
+	if(node!=NULL){
+		inOrderTraversal(node -> leftChild);
+		printf("%d ", node -> data);
+		inOrderTraversal(node -> rightChild);
+	}
+}
+void postOrderTraversal(struct node* node){
+	if(node!=NULL){
+		postOrderTraversal(node -> leftChild);
+		postOrderTraversal(node -> rightChild);
+		printf("%d ", node -> data);
+	}
+}
 
 // driver program
 int main(){
@@ -98,5 +119,14 @@ int main(){
 	}else {
 	  printf("[ x ] Element not found (%d).\n", i);
 	}   
+
+	printf("\nPreorder traversal: ");
+	preOrderTraversal(root);
+
+	printf("\nInorder traversal: ");
+	inOrderTraversal(root);
+
+	printf("\nPost order traversal: ");
+	postOrderTraversal(root);  
 	return 0;
 }
