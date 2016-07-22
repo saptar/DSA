@@ -140,7 +140,7 @@ As mentioned above there are three types of traversal and they are:
   
 - **Post-order Traversal**  
 	In this traversal method, the root node is visited last, hence the name. First we traverse left subtree, then right subtree and finally root.  
-		```sh
+	```sh
 
 								A <- Root
 							   / \
