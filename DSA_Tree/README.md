@@ -127,7 +127,7 @@ As mentioned above there are three types of traversal and they are:
 
 	```
 	We start from **A**, and following pre-order traversal, we first visit **A** itself , before moving on to **B** and visiting it. We do the same with the subtree rooted at **B**, before moving on with **C**.  
-		```sh
+	```sh
 	A -> B -> D -> E -> C -> F -> G
 	```
 	Algorithm:  
@@ -140,7 +140,7 @@ As mentioned above there are three types of traversal and they are:
   
 - **Post-order Traversal**  
 	In this traversal method, the root node is visited last, hence the name. First we traverse left subtree, then right subtree and finally root.  
-		```sh
+	```sh
 
 								A <- Root
 							   / \
