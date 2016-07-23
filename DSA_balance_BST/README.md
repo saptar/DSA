@@ -42,14 +42,14 @@ Steps to follow for insertion:
 Let the newly inserted node be w  
 1. Perform standard BST insert for w.  
 2. Start from the newly inserted node w and travel up and first unbalanced node . Let Z be the first unbalanced node, y be the child of z that comes on the path from w to z and x be the grandchild of z that comes in the path from w to z.  
-3. Re-balance the tree by performing appropriate rotations on the subtree rooted with z. There can be 4 possible casses that needs to be handled as x,y and z can be arranged in 4 ways. Following are the possible 4 arrangements.  
-	- y is left child of z and x is left child of y (left left case)  
-	- y is left child of z and x is right child of y (left right case)  
-	- y is right child of z and x is right child of y (right right case)  
-	- y is right child of z and x is left child of y(right left case)  
-Following are the operations that needs to be performed in the above mentioned cases. In all cases , we need to re-balance the subtree rooted with z and the complete tree becoms balanced as the height of the subtree rooted with z becomes same as it was before insertion.  
+3. Re-balance the tree by performing appropriate rotations on the subtree rooted with z. There can be 4 possible casses that needs to be handled as x,y and z can be arranged in 4 ways. Following are the possible 4 arrangements.   
+- y is left child of z and x is left child of y (left left case)  
+- y is left child of z and x is right child of y (left right case)  
+- y is right child of z and x is right child of y (right right case)  
+- y is right child of z and x is left child of y(right left case)  
+Following are the operations that needs to be performed in the above mentioned cases. In all cases , we need to re-balance the subtree rooted with z and the complete tree becoms balanced as the height of the subtree rooted with z becomes same as it was before insertion.   
 
- 	- Left Left Case:  
+- Left Left Case:  
  	```sh
  		T1, T2, T3 and T4 are subtrees.
 	         z                                      y 
@@ -60,7 +60,7 @@ Following are the operations that needs to be performed in the above mentioned c
 	    / \
 	  T1   T2	
  	```
- 	- Left Right Case
+- Left Right Case  
  	```sh
  	     z                               z                           x
 	    / \                            /   \                        /  \ 
