@@ -61,6 +61,7 @@ Following are the operations that needs to be performed in the above mentioned c
 	  T1   T2	
  	```
 - Left Right Case  
+
  	```sh
  	     z                               z                           x
 	    / \                            /   \                        /  \ 
