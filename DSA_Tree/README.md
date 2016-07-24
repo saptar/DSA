@@ -91,29 +91,35 @@ There are three posible cases that we can encounter while deleting a node.
 - **Node to be deleted is a leaf node**  
 	In such a case, find the node and simply delete the node.  
 	```sh
+
 	          50                            50
            /     \         delete(20)      /   \
           30      70       --------->    30     70 
          /  \    /  \                     \    /  \ 
        20   40  60   80                   40  60   80
+
 	```    
 - **Node to be deleted has one child**  
 	Copy the child to the node and delete the child.  
-	```sh  
+	```sh
+
 	 		  50                            50
            /     \         delete(30)      /   \
           30      70       --------->    40     70 
             \    /  \                          /  \ 
             40  60   80                       60   80
+
 	```    
 - **Node to be deleted has two children**  
 	In such a case, find the inorder successor of the node and copy that to the node and delete the inorder successor.  
-	```sh  
+	```sh 
+
 	          50                            60
            /     \         delete(50)      /   \
           40      70       --------->    40    70 
                  /  \                            \ 
                 60   80                           80
+                
 	```  
 	Inorder successor is need only when the node to be deleted has a right child.  
 
