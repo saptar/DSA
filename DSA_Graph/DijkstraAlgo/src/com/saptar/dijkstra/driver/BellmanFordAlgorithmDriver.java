@@ -26,6 +26,8 @@ public class BellmanFordAlgorithmDriver {
 	    addLane("Edge_6", 4, 5, 50);
 	    addLane("Edge_7", 4, 6, -10);
 	    addLane("Edge_8", 6, 5, 5);
+	    // test for negative cycle
+	    //addLane("Edge_9", 2, 0, -20);
 	    
 	    Graph graph = new Graph(nodes, edges);
 	    BellmanFord algo = new BellmanFord(graph);
