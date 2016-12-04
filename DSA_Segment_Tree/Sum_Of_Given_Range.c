@@ -1,6 +1,41 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
+// declaring function to calculate the mid
+int getMid(int ss, int se);
+
+// updateValueUtil
+void updateValueUtil(int *st, int ss, int se, int i, int diff, int si){
+	// check if the input index lies outside the range
+	// base case of recursion
+	if(i < ss || i > se){
+		return;
+	}
+	// if input index is in range of this node
+	// update this node and its children.
+	st[si] = st[si] + diff;
+	if(se != ss){
+		int mid = getMid(ss, se);
+		updateValueUtil(st, ss, mid, i, diff, 2*si + 1);
+		updateValueUtil(st, mid+1, se, i, diff, 2*si + 2);
+	}
+}
+
+// update value
+// The fuction to update the value in input array and segment tree.
+void updateValue(int arr[], int *st, int n, int i, int new_value){
+	// check for errornous input
+	if(i < 0 || i > n-1){
+		printf("Invalid input");
+		return ;
+	}
+	// get difference betweeen the old value and the new value
+	int diff = new_value - arr[i];
+	// update the value in the input array
+	arr[i] = new_value;
+	updateValueUtil(st, 0, n-1, i, diff, 0);
+}
 
 // getSumUtil
 int getSumUtil(int *st, int ss, int se, int qs, int qe, int si){
@@ -75,7 +110,7 @@ int main(){
 	// Print the sum of values in the array from index 1 to 3.
 	printf("sum of values in the given range = %d\n",getSum(st, n, 1, 3) );
 	// update: arr[1] = 10
-	//updateValue(arr, st, n, 1, 10);
+	updateValue(arr, st, n, 1, 10);
 	// Find the sum after the index value has been updated
-	//printf("sum after updation = %d\n",getSum(st, n, 1, 3));
+	printf("sum after updation = %d\n",getSum(st, n, 1, 3));
 }
