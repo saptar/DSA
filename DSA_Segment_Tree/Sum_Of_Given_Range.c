@@ -89,7 +89,7 @@ int constructSTUtil(int arr[], int ss, int se, int *st, int si){
 // construct segement tree
 int *constructST(int arr[], int n){
 	// Allocates mememory for the segment tree array
-	//Height of the array
+	// Height of the array
 	int h = (int)(ceil(log2(n)));
 	// Maximum size of the segment tree
 	int max_size = 2*(int)pow(2, h) - 1;
