@@ -1,4 +1,4 @@
-## Array
+ ## Array
 
 Array is a container in memory which can hold fixed number of same type of elements.
 

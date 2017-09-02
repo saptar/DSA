@@ -9,7 +9,8 @@ A pre-requisite for this algorithm to work correctly, is to have the array sorte
 
 Binary Search , searches a particular item , by searching the middle element of the array.  
 If a match is found , the index is returned.  
-If not, then the lower or the upper bound is updated based on the fact that the search item is greater than or less than the element in the middle. This routing is followed recursively, untill the upper bound becomes less than lower bound or a match is found.  
+If not, then the lower or the upper bound is updated based on the fact that the search item is greater than or less than the element in the middle. This routing is 
+followed recursively, untill the upper bound becomes less than lower bound or a match is found.  
 To Calculate the midpoint following formula is used.  
 ```sh
 midpoint = lowerBound + (upperBound - lowerBound)/2
