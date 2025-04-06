@@ -1,0 +1,13 @@
+### Input 
+total_items max_knapsack_weight
+item_wt item_val
+
+example:
+
+6 15
+6 5
+5 6
+6 4
+6 6
+3 5
+7 2
