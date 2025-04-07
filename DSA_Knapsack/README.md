@@ -11,3 +11,7 @@ example:
 6 6
 3 5
 7 2
+
+### for subset problem, input should be
+2 3 7 99 -> first line , space seperated integer values
+33 -> sum
