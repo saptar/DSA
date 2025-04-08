@@ -26,4 +26,5 @@ if __name__=="__main__":
             if j == 0:
                 t[i][0] = True        
     print (subsetSum(input_arr,sum,len(input_arr)))
+    print(t)
 
