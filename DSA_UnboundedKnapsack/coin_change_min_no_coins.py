@@ -45,7 +45,10 @@ if __name__ == "__main__":
     for j in range(sum+1):
         if(j!=0):
             t[0][j] = sys.maxsize
-            t[1][j] = j
+            if(j%arr[0]==0):
+                t[1][j]=int(j/arr[0])
+            else:
+                t[1][j] = sys.maxsize
     print(coinChangeMem(arr, sum, n))
     
     print(minNoOfCoins(arr, sum, n))
