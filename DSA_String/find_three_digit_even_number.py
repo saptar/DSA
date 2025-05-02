@@ -25,13 +25,15 @@ if __name__ == "__main__":
     arr_even = list(filter(lambda x: x%2 == 0,arr))
     
     res = 0
+    s= set()
     for i in arr_even:
-        if i == 0:
+        if i in s:
             continue
         arr_copy = arr.copy()
         arr_copy.remove(i)
         
         res +=getCount(arr_copy)
+        s.add(i)
     print(res)
 
 
