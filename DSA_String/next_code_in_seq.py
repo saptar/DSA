@@ -30,14 +30,13 @@ Languages: Python 3,C#,Java,C++,C,Scala,Go,Perl,Bash,Plain JavaScript,R,PHP,Ruby
 import string
 
 def getNextCode(lastCode):
-    last_alphabet = ord('Z')
-    last_digit = 9
+    
     arr_alpha = [i for i in list(lastCode) if i in string.ascii_uppercase]
     arr_num = [int(i) for i in list(lastCode) if i in [str(j) for j in range(10)]]
-    codelength = len(lastCode)
+    
     carry = 0
     l_arr_alpha = len(arr_alpha)
-    l_arr_num = len(arr_num)
+    
     num_add = int(''.join(map(str,arr_num)))+1
     
     ret_num = ""

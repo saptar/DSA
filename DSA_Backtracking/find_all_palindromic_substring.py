@@ -1,3 +1,16 @@
+'''
+Given a string s, split s into substrings where every substring is a palindrome. Return all possible lists of palindromic substrings.
+
+You may return the solution in any order.
+
+Example 1:
+
+Input: s = "aab"
+
+Output: [["a","a","b"],["aa","b"]]
+'''
+
+
 def isPalindrome(s):
     ptr1, ptr2 = 0, len(s)-1
     while ptr1<ptr2:
