@@ -1,4 +1,3 @@
-import heapq
 import sys
 
 infinity = sys.maxsize

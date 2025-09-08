@@ -32,3 +32,40 @@ Constraints:
 All prerequisite pairs are unique.
 
 '''
+import collections
+def solution(prereq,numCourses):
+    ## create adj list
+    adj = collections.defaultdict(list)
+    for s,e in prereq:
+        adj[s].append(e)
+    
+    courses = []
+    considered = set()
+
+    def dfs(i,visited):
+        if i in visited:
+            ## we have found a cycle return false
+            return False
+        if i in considered:
+            ## we have already considered this return True
+            return True
+        
+        visited.add(i)
+        considered.add(i)
+        res = True
+        for dep in adj[i]:
+            res = res and dfs(dep,visited)
+        visited.remove(i)
+        courses.append(i)
+        return res
+    for i in range(numCourses):
+        visited = set()
+        if not dfs(i,visited):
+            return []
+    return courses
+
+if __name__=="__main__":
+    numCourses = 3
+    prereq = [[1,0]]
+    print(solution(prereq,numCourses))
+
