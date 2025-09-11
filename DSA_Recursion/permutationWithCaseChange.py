@@ -24,12 +24,17 @@ def getCaseChangePermutation(s:list)->list:
     if len(s)==0:
         return [""]
     r = []
+    def transform(s):
+        if s.isupper():
+            return s.lower()
+        else:
+            return s.upper()
     def solve(i,o):
         if i == len(s)-1:
             r.append(o)
             return
         if not s[i+1].isdigit():
-            solve(i+1,o+s[i+1].upper())
+            solve(i+1,o+transform(s[i+1]))
             solve(i+1,o+s[i+1])
         else:
             solve(i+1,o+s[i+1])

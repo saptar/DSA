@@ -5,6 +5,9 @@ i/p:
 "ab"
 o/p:
 "","a","b","ab"
+i/p: "abc"
+o/p:
+['abc', 'ab', 'ac', 'a', 'bc', 'b', 'c', '']
 
 '''
 def getAllSubset(s):
